@@ -389,3 +389,24 @@ Use '--' to separate paths from revisions, like this:
 2024-11-15 00:55:47.831 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
 2024-11-15 00:55:47.832 [warning] [Git][getBranch] No such branch: master
 2024-11-15 00:55:47.849 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-11-15 00:55:47.904 [info] > git status -z -uall [70ms]
+2024-11-15 00:55:51.648 [info] [Git][getRemotes] No remotes found in the git config file
+2024-11-15 00:55:51.648 [info] > git config --get commit.template [6ms]
+2024-11-15 00:55:51.653 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [6ms]
+2024-11-15 00:55:51.668 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [7ms]
+2024-11-15 00:55:51.714 [info] > git status -z -uall [59ms]
+2024-11-15 00:55:54.310 [info] [Git][getRemotes] No remotes found in the git config file
+2024-11-15 00:55:54.311 [info] > git config --get commit.template [5ms]
+2024-11-15 00:55:54.313 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2024-11-15 00:55:54.331 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [12ms]
+2024-11-15 00:55:54.370 [info] > git status -z -uall [55ms]
+2024-11-15 00:55:59.379 [info] [Git][getRemotes] No remotes found in the git config file
+2024-11-15 00:55:59.380 [info] > git config --get commit.template [6ms]
+2024-11-15 00:55:59.382 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2024-11-15 00:55:59.403 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [14ms]
+2024-11-15 00:55:59.452 [info] > git status -z -uall [67ms]
+2024-11-15 00:56:04.463 [info] [Git][getRemotes] No remotes found in the git config file
+2024-11-15 00:56:04.464 [info] > git config --get commit.template [5ms]
+2024-11-15 00:56:04.466 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2024-11-15 00:56:04.477 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-11-15 00:56:04.524 [info] > git status -z -uall [56ms]
