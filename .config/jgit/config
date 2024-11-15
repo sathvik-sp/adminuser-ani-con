@@ -1,0 +1,3 @@
+[filesystem "Red Hat, Inc.|17.0.13|/dev/mapper/rl-root"]
+	timestampResolution = 4900 nanoseconds
+	minRacyThreshold = 1889 microseconds

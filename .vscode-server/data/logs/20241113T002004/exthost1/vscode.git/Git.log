@@ -1,0 +1,60 @@
+2024-11-13 00:20:13.203 [info] [main] Log level: Info
+2024-11-13 00:20:13.203 [info] [main] Validating found git in: "git"
+2024-11-13 00:20:13.203 [info] [main] Using git "2.43.5" from "git"
+2024-11-13 00:20:13.203 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-13 00:20:13.203 [info] > git rev-parse --show-toplevel [12ms]
+2024-11-13 00:20:13.203 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.203 [info] > git rev-parse --show-toplevel [8ms]
+2024-11-13 00:20:13.203 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-13 00:20:13.204 [info] [Model][openRepository] Opened repository: /home/adminuser/SampleMaven
+2024-11-13 00:20:13.204 [info] > git config --get commit.template [26ms]
+2024-11-13 00:20:13.204 [info] > git rev-parse --show-toplevel [28ms]
+2024-11-13 00:20:13.204 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.204 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-13 00:20:13.204 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.204 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [11ms]
+2024-11-13 00:20:13.204 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/adminuser/SampleMaven/.git/refs/remotes/origin/master'
+2024-11-13 00:20:13.204 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-13 00:20:13.204 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.204 [info] > git rev-parse refs/remotes/origin/master [5ms]
+2024-11-13 00:20:13.204 [info] > git rev-parse --show-toplevel [12ms]
+2024-11-13 00:20:13.205 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.205 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [8ms]
+2024-11-13 00:20:13.205 [info] > git rev-parse --show-toplevel [7ms]
+2024-11-13 00:20:13.205 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.205 [info] > git status -z -uall [21ms]
+2024-11-13 00:20:13.205 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [24ms]
+2024-11-13 00:20:13.205 [info] > git rev-parse --show-toplevel [44ms]
+2024-11-13 00:20:13.205 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.205 [info] > git config --get commit.template [8ms]
+2024-11-13 00:20:13.205 [info] > git config --local branch.master.vscode-merge-base [5ms]
+2024-11-13 00:20:13.205 [info] > git rev-parse --show-toplevel [9ms]
+2024-11-13 00:20:13.206 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.206 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [9ms]
+2024-11-13 00:20:13.206 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-13 00:20:13.206 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.206 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [17ms]
+2024-11-13 00:20:13.206 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/adminuser/SampleMaven/.git/refs/remotes/origin/master'
+2024-11-13 00:20:13.206 [info] > git rev-parse --show-toplevel [9ms]
+2024-11-13 00:20:13.206 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.206 [info] > git merge-base refs/heads/master refs/remotes/origin/master [23ms]
+2024-11-13 00:20:13.206 [info] > git rev-parse refs/remotes/origin/master [21ms]
+2024-11-13 00:20:13.206 [info] > git status -z -uall [26ms]
+2024-11-13 00:20:13.206 [info] > git rev-parse --show-toplevel [33ms]
+2024-11-13 00:20:13.206 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.206 [info] > git diff --name-status -z --diff-filter=ADMR 5ff110cc5053fe311e8de90463098762e681ef99...refs/remotes/origin/master [43ms]
+2024-11-13 00:20:13.206 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [31ms]
+2024-11-13 00:20:13.206 [info] > git rev-parse --show-toplevel [22ms]
+2024-11-13 00:20:13.206 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.212 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-13 00:20:13.212 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-13 00:20:13.215 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-13 00:20:13.816 [info] > git check-ignore -v -z --stdin [3ms]
+2024-11-13 00:20:13.941 [info] > git show --textconv :Dockerfile [16ms]
+2024-11-13 00:20:13.949 [info] > git ls-files --stage -- /home/adminuser/SampleMaven/Dockerfile [15ms]
+2024-11-13 00:20:13.965 [info] > git cat-file -s 5d948c9e945902a54f9043423f19da3513ac6d42 [7ms]
+2024-11-13 00:22:34.721 [info] > git show --textconv :docker-compose.yaml [5ms]
+2024-11-13 00:22:34.724 [info] > git ls-files --stage -- /home/adminuser/SampleMaven/docker-compose.yaml [4ms]
+2024-11-13 00:22:36.644 [info] > git show --textconv :Dockerfile [6ms]
+2024-11-13 00:22:36.652 [info] > git ls-files --stage -- /home/adminuser/SampleMaven/Dockerfile [10ms]
+2024-11-13 00:22:36.657 [info] > git cat-file -s 5d948c9e945902a54f9043423f19da3513ac6d42 [2ms]

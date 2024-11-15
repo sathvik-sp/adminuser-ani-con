@@ -1,0 +1,13 @@
+services:
+  banking_service:
+    build: .
+    image: bankingmicroservice:latest
+    ports:
+      - "8000:8080"
+    networks:
+      - banking_network
+    restart: unless-stopped
+
+networks:
+  banking_network:
+    driver: bridge

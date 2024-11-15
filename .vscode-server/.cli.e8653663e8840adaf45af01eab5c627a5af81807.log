@@ -1,0 +1,6 @@
+Listening on 127.0.0.1:34981
+looking for token 03b8af9d-5b33-4940-8806-9562a9d8aba7, got Some("03b8af9d-5b33-4940-8806-9562a9d8aba7")
+[2024-11-14 22:50:35] info Disposed of connection to running server.
+[2024-11-14 22:50:36] info Checking /home/adminuser/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/log.txt and /home/adminuser/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/pid.txt for a running server...
+[2024-11-14 22:50:36] info Starting server...
+[2024-11-14 22:50:36] info Server started

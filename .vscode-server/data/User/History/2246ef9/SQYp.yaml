@@ -1,0 +1,14 @@
+version: 'latest'
+services:
+  web:
+    image: "customtomcat:v1"
+    build: .
+    ports:
+      - "8000:8080"
+
+  web2:
+    image: tomcat:latest
+    ports:
+      - "8001:8080"
+    volumes:
+      - /home/adminuser/bindmount:/usr/local/tomcat/webapps

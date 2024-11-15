@@ -1,0 +1,11 @@
+services:
+  banking-service:
+    build: .
+    ports:
+      - "8000:8080" # Map port 8000 on host to port 8080 in container
+    networks:
+      - banking-network
+
+networks:
+  banking-network:
+    driver: bridge

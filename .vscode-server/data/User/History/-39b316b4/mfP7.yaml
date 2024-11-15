@@ -1,0 +1,31 @@
+---
+- name: Install and start Jenkins
+  hosts: jenkins_server
+  become: true
+  tasks:
+    - name: Install Java
+      ansible.builtin.dnf:
+        name: java-11-openjdk
+        state: present
+
+    - name: Add Jenkins repository file
+      ansible.builtin.copy:
+        dest: /etc/yum.repos.d/jenkins.repo
+        content: |
+          [jenkins]
+          name=Jenkins-stable
+          baseurl=https://pkg.jenkins.io/redhat-stable/
+          gpgcheck=0
+          enabled=1
+
+    - name: Install Jenkins
+      ansible.builtin.dnf:
+        name: jenkins
+        state: present
+        update_cache: true
+
+    - name: Start and enable Jenkins
+      ansible.builtin.service:
+        name: jenkins
+        state: started
+        enabled: true

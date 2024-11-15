@@ -1,0 +1,8 @@
+FROM python:2.7-slim
+WORKDIR /app
+ADD . /app
+RUN pip install --trusted-host pypi.python.org -r requuirement.txt
+RUN apt-get update && apt-get install -y iputils-ping curl && rm -rf /var/lib/apt/lists/*
+EXPOSE 5010
+ENV NAME World
+CMD ["python","app.py"]

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  banking_service:
+    image: tomcat:latest
+    volumes:
+      - ./path/to/your/war-or-jar-file:/usr/local/tomcat/webapps
+    ports:
+      - "8000:8080"
+    networks:
+      - banking_network
+
+networks:
+  banking_network:
+    driver: bridge

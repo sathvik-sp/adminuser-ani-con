@@ -1,0 +1,378 @@
+ping 10.0.0.5
+sudo dnf install epel-release -y
+sudo dnf install ansible -y
+ssh-keygen -t rsa -b 2048
+cat .ssh/id_rsa.pub 
+cat .ssh/id_rsa.pub >> .ssh/authorized_keys 
+cat .ssh/authorized_keys 
+sudo vi /etc/ansible/hosts 
+ansible 10.0.0.4 -m ping
+cat .ssh/id_rsa.pub 
+ansible 10.0.0.5 -m ping
+ip a
+sudo su -
+sudo su -
+ ansible client -m command -a "ls -l"
+ ansible client -m command -a "ls -la"
+ ansible client -m command -a "sleep 60"
+ls
+ansible-playbook pb01.yaml 
+ls
+sudo dnf check-update
+clear
+sudo dnf check-update
+sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
+sudo systemctl status docker
+sudo systemctl enable docker
+docker --version
+docker image ls
+sudo usermod -aG docker $(whoami)
+docker image ls
+sudo usermod -aG docker adminuser
+docker image ls
+sudo dockerimage ls
+sudo docker image ls
+sudo chmod 666 /var/run/docker.sock 
+docker image ls
+docker run hello-world
+docker image ls
+docker image ps
+docker ps -a
+docker ps
+docker pull ubuntu:latest
+docker image ls
+docker image ps
+docker 
+docker pull ubuntu
+docker run ubuntu
+docker run ubuntu sleep 10
+docker ps
+docker ps -a
+docker run -d ubuntu sleep 10
+docker ps -a
+docker ps
+docker top d577ecb9ac75
+docker run -d ubuntu sleep 100
+docker ps
+docker top f72a8ebc0a67
+docker ps
+docker ps -a
+docker run f72a8ebc0a67
+docker start f72a8ebc0a67
+docker ps
+docker top f72a8ebc0a67 
+docker ps
+docker start f72a8ebc0a67
+docker ps -a
+docker stop f72a8ebc0a67
+docker start f72a8ebc0a67
+docker kill f72a8ebc0a67
+docker pull httpd
+docker run -d --name con1 httpd
+docker ps
+clear
+ls
+ip a 
+ip a docker0
+docker network ls
+docker inspect con1 
+curl 172.17.0.1/16
+curl 172.17.0.1
+curl 172.17.0.2
+docker run -d -p 8000:80 --name con2 httpd:latest 
+curl localhost:8000
+docker exec -it con2 /bin/bah
+docker exec -it con2 /bin/bash
+docker commit con2 customhttpd:v1
+docker ls
+docker image ls
+docker ps -a
+docker rm con1 con2 -f
+docker container prune 
+docker image ls
+docker ps -a
+docker run -d -p 8000:80 --name con1 customhttpd:v1
+docker ps
+docker rm con1 -f
+docker ps 
+mkdir serverfiles
+cd serverfiles/
+cat index.html 
+cat <h1>webiste<h1> index.html 
+cat <h1>webiste<h1> >> index.html 
+ 
+echo index.html
+echo "<h1>website</h1>" index.html
+echo "<h1>website</h1>" >> index.html
+chat we
+chat index.html 
+cat index.html 
+docker run -d -p 8000:80 --name con1 customhttpd:v1
+docker exec -it con1 /bin/bash/htdocs
+docker exec -it con1 /bin/bash
+docker rm con1 -f
+docker run -d -p 8000:80 --name con1 -v $pws:/usr/local/apache2/htdocs  customhttpd:v1
+docker run -d -p 8000:80 --name con1 -v $pws:/usr/local/apache2/htdocs customhttpd:v1
+docker run -d -p 8000:80 --name con1 -v $pwd:/usr/local/apache2/htdocs customhttpd:v1
+docker run -d -p 8000:80 --name con1 -v $pPWD/usr/local/apache2/htdocs customhttpd:v1
+curl localhost:8000
+history top
+history | tail
+history | tail -n 20
+ls
+cat index.html 
+docker ps
+docker rm con1 -f
+docker ps
+docker run -d -p 8000:80 --name con1 -v $PWD/usr/local/apache2/htdocs customhttpd:v1
+curl localhost:8000
+docker ps
+docker rm con1 -f
+docker run -d -p 8000:80 --name con1 -v $PWD:/usr/local/apache2/htdocs customhttpd:v1
+curl localhost:8000
+history | tail -n 20
+cat >> index.html 
+clear
+docker conatiner prune
+docker container prune
+docker ps
+docker rm con1 -f
+docker ps
+docker ps -a
+docker image ls
+docker run -d -p 8000:80 --name con1 httpd:latest 
+cd ..
+rm serverfiles/
+rm serverfiles -f
+rm -f serverfiles 
+rm -r serverfiles 
+ls
+docker ps
+docker exec -lt con1 /bin/bit
+docker exec -lt con1 /bin/bash
+docker exec -it con1 /bin/bash
+docker run -d -p 8001:80 --name con2 httpd:latest 
+docker exec -it con2 /bin/bash
+docker commit con2 updatedconatiner:v1
+docker ls
+docker ps -a
+docker image ls
+mkdir bindmount
+cd bindmount/
+touch "<h1>bind mount<h2>" > index.html
+cat index.html 
+touch "<h1>bind mount<h2>" >> index.html
+cat index.html 
+cat >> index.html 
+docker run -d -p 8002:80 --name con2 -v $PWD:/usr/local/apache2/htdocs updatedconatiner:v1
+docker run -d -p 8002:80 --name con3 -v $PWD:/usr/local/apache2/htdocs updatedconatiner:v1
+docker ps
+su cd /var/lib/docker/
+cd /var/lib/docker/
+
+sudo cd /var/lib/docker/
+su .
+su ~
+su -
+ls /var/lib/docker/
+su -
+cd ..
+su -
+sudo su -
+docker images ls
+docker image ls
+docker rmi c4be38451055
+docker ps
+docker ps -a
+docker image prune
+docker ps -a
+docker image prune -f
+docker ps -a
+docker rm -f con1 con2 con3 con4
+docker ps -a
+docker image ls
+docker rmi c4be38451055
+docker rmi 59dbee7fd6be
+clear
+docker image ls
+docker volume delete myvol1
+docker volume ls
+docker rm myvol1
+sudo su -
+celar
+clear
+ls
+rm -r bindmount 
+celar
+clear
+docker pull httpd:latest
+docker image ls
+docker rm httpd 
+docker image rm httpd
+clear
+docker pull httpd:latest
+docker run -d -p 8001:80 httpd
+docker ps
+clear
+docker image ls
+docker ps
+docker run -d -p 8000:80 --name con0 httpd:latest 
+docker ps
+curl localhost 8000
+curl localhost:800
+curl localhost:8000
+clear
+curl localhost:8000
+docker run -d -p 8001:80 --name con1 httpd:latest 
+docker ps
+curl localhost:8001
+docker exec -it con1 /bin/bash
+curl localhost:8001
+clear
+docker ps
+clear
+mkdir bindmount
+cd bindmount/
+touch "<h1>this is bind mount<h1>" > index.html
+cat index.html 
+ls
+touch "<h1>this is bind mount<h1>" > index.html
+cat index.html 
+ls
+rm '<h1>this is bind mount<h1>' 
+touch "<h1>this is bind mount<h1>" > /index.html
+cat >> index.html
+clear
+cd ..
+rm -r bindmount/ 
+clear
+mkdir bindmount | cd bindmount
+clear
+rm -r bindmount/ 
+clear
+mkdir bindmount
+cd bindmount/
+ls
+touch index.html
+cat >> index.html 
+cat index.html 
+docker -d -p 8002:80 --name con2 -v $PWD:/usr/local/apache2/htdocks httpd:latest
+clear
+docker -d -p 8002:80 --name con2 -v $PWD:/usr/local/apache2/htdocks httpd:latest
+clear
+docker run -d -p 8002:80 --name con2 -v $PWD:/usr/local/apache2/htdocks httpd:latest
+docke ps
+docker ps
+curl localhost:8002
+docker rm -f con2
+clear
+docker ps
+clear
+docker run -d -p 8002:80 --name con2 -v $PWD:/usr/local/apache2/htdocs httpd:latest
+docker ps
+curl localhost:8002
+clear
+cd ..
+clear
+docker volume create myvol2
+sudo su -
+clear
+sudo su -
+docker -d -p 80003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
+clear
+docker -d -p 80run 003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
+clear
+docker run -d -p 80003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
+docker run -d -p 8003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
+docker ps
+curl localhost:8003
+clear
+sudo su -
+docker image ls
+docker history image ubuntu
+docker history image
+docker history ubuntu
+system docker df
+docker system df
+clear
+ls
+cd ex02/
+docker build . -t customhttpd:v1
+image ls
+docker image ls
+docker system history 3d8bd7c61704
+docker system df
+clear
+docker image ls
+docker system df
+docker history customhttpd:v1
+
+
+docker pull httpd:latest
+docker image ls
+docker build . -t customhttpd:v1
+docker image ls
+docker ps
+docker ps -a
+docker rm con0 con1 con2 con3
+docker ps -
+docker rm keen_chatterjee 
+docker run -d -p 8000:80 --name con1 customhttpd:v1 
+curl localhost:8000
+docker rm con1 -f
+docker rmi customhttpd:v1 
+clear
+docker image ls
+docker build . -t customhttpd:v1
+docker run -d -p 8000:80 --name con1 customhttpd:v1
+curl localhost:8000
+clear
+curl localhost:8000
+cd ..
+ls
+docker ps
+docker rm -f f15b3770bab0
+docker ps -a
+clear
+cd ex03
+docker build . -t custompy:v1
+docker run -d -p 8000:8000 --name con1 custompy:v1
+curl localhost:8000
+
+docker ps
+docker pd -a
+docker ps -a
+docker rmi 17199510ff24
+docker rm 17199510ff24
+docker image ls
+docker rmi custompy:v1 
+clear
+docker build . -t custompy:v1
+docker rmi custompy:v1 
+clear
+docker build . -t custompy:v1
+docker rmi custompy:v1 
+clear
+docker build . -t custompy:v1
+docker run -d -p 8000:5000 --name con1 custompy:v1
+curl localhost:8000
+clear
+curl localhost:8000
+docker exec -it con1 
+clear
+docker ps 
+docker exec -it con1 /bin/bash
+docker run -d redis
+docker inspect redis | grep IPA
+docker ps
+docker inspect redis
+docker inspect redis | grep ip
+docker exec -it redis /bin/bash
+docker ps
+docker image ls
+docker inspect 4a18ee874d27
+docker inspect 4a18ee874d27 | grep IPA
+
+

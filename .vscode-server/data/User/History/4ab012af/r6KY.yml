@@ -1,0 +1,74 @@
+---
+- name: Install Docker and Docker Compose on CentOS/RHEL
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install dnf-plugins-core
+      dnf:
+        name: dnf-plugins-core
+        state: present
+
+    - name: Add Docker repository
+      command: >
+        dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+      args:
+        creates: /etc/yum.repos.d/docker-ce.repo
+
+    - name: Install Docker packages
+      dnf:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-buildx-plugin
+          - docker-compose-plugin
+        state: present
+
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        enabled: true
+        state: started
+
+    - name: Install Docker Compose as standalone binary (if needed)
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m)"
+        dest: /usr/local/bin/docker-compose
+        mode: '0755'
+      register: docker_compose_download
+      when: ansible_distribution_major_version is version('9', '<')
+
+    - name: Verify Docker Compose installation
+      command: docker-compose --version
+      register: compose_version
+      ignore_errors: yes
+
+    - name: Show Docker Compose version
+      debug:
+        var: compose_version.stdout
+
+    - name: Run hello-world container to verify Docker installation
+      command: docker run hello-world
+      register: hello_world_output
+      ignore_errors: yes
+
+    - name: Show Docker hello-world output
+      debug:
+        var: hello_world_output.stdout
+
+    - name: Add current user to the docker group (optional)
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+      when: ansible_user != 'root'
+
+    - name: Restart Docker to apply group changes (if user added to group)
+      systemd:
+        name: docker
+        state: restarted
+      when: ansible_user != 'root'
+
+  vars:
+    ansible_user: "{{ ansible_env.USER }}"

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  banking_service:
+    image: tomcat:latest
+    volumes:
+      - /home/adminuser/BankingMicroservice/target/BankingMicroservice-1.0-SNAPSHOT.jar:/usr/local/tomcat/webapps/BankingMicroservice-1.0-SNAPSHOT.jar
+    ports:
+      - "8000:8080"
+    networks:
+      - banking_network
+
+networks:
+  banking_network:
+    driver: bridge

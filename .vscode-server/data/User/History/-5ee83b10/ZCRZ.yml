@@ -1,0 +1,73 @@
+---
+- name: Install Docker and Docker Compose on Rocky Linux 9
+  hosts: ansible_controller
+  become: true
+
+  tasks:
+    - name: Ensure the system is up-to-date
+      dnf:
+        name: "*"
+        state: latest
+        update_only: yes
+
+    - name: Install required dependencies for Docker
+      dnf:
+        name: 
+          - dnf-plugins-core
+          - device-mapper-persistent-data
+          - lvm2
+        state: present
+
+    - name: Add Docker repository
+      command: >
+        dnf config-manager --add-repo https://download.docker.com/linux/centos/7/x86_64/stable/
+      args:
+        creates: /etc/yum.repos.d/docker-ce.repo
+
+    - name: Install Docker
+      dnf:
+        name: 
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Add current user to the Docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Download Docker Compose binary
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)"
+        dest: "/usr/local/bin/docker-compose"
+        mode: '0755'
+
+    - name: Create a symbolic link for Docker Compose (if necessary)
+      file:
+        src: /usr/local/bin/docker-compose
+        dest: /usr/bin/docker-compose
+        state: link
+
+    - name: Verify Docker installation
+      command: docker --version
+      register: docker_version
+
+    - name: Display Docker version
+      debug:
+        msg: "Docker installed successfully: {{ docker_version.stdout }}"
+
+    - name: Verify Docker Compose installation
+      command: docker-compose --version
+      register: compose_version
+
+    - name: Display Docker Compose version
+      debug:
+        msg: "Docker Compose installed successfully: {{ compose_version.stdout }}"

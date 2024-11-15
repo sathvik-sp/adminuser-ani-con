@@ -1,0 +1,15 @@
+services:
+  banking_service:
+    image: openjdk:latest
+    volumes:
+      - ./target/BankingMicroservice-1.0-SNAPSHOT.jar:/usr/src/app/BankingMicroservice.jar
+    ports:
+      - "8000:8080"
+    working_dir: /usr/src/app
+    command: ["java", "-jar", "BankingMicroservice.jar"]
+    networks:
+      - banking_network
+
+networks:
+  banking_network:
+    driver: bridge

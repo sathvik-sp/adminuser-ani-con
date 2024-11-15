@@ -1,0 +1,77 @@
+2024-11-14 00:08:56.173 [info] [main] Log level: Info
+2024-11-14 00:08:56.173 [info] [main] Validating found git in: "git"
+2024-11-14 00:08:56.173 [info] [main] Using git "2.43.5" from "git"
+2024-11-14 00:08:56.173 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-14 00:08:56.174 [info] > git rev-parse --show-toplevel [35ms]
+2024-11-14 00:08:56.174 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.174 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-14 00:08:56.174 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.174 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-14 00:08:56.174 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.175 [info] > git rev-parse --show-toplevel [15ms]
+2024-11-14 00:08:56.175 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.175 [info] > git rev-parse --show-toplevel [28ms]
+2024-11-14 00:08:56.175 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.175 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-14 00:08:56.176 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.176 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-14 00:08:56.176 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.176 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-14 00:08:56.176 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.176 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-14 00:08:56.177 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.177 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-14 00:08:56.177 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-14 00:08:56.177 [info] [Model][openRepository] Opened repository: /home/adminuser/BankingMicroservice
+2024-11-14 00:08:56.177 [info] > git config --get commit.template [6ms]
+2024-11-14 00:08:56.178 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-14 00:08:56.178 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2024-11-14 00:08:56.178 [info] > git rev-parse --git-dir --git-common-dir [11ms]
+2024-11-14 00:08:56.178 [info] [Model][openRepository] Opened repository: /home/adminuser/SampleMaven
+2024-11-14 00:08:56.178 [info] > git status -z -uall [23ms]
+2024-11-14 00:08:56.178 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [18ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse --show-toplevel [18ms]
+2024-11-14 00:08:56.179 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.179 [info] > git config --get commit.template [23ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [11ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse --show-toplevel [8ms]
+2024-11-14 00:08:56.179 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.179 [info] > git config --get commit.template [13ms]
+2024-11-14 00:08:56.179 [info] > git config --local branch.main.vscode-merge-base [13ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-14 00:08:56.179 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [12ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [17ms]
+2024-11-14 00:08:56.179 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/adminuser/SampleMaven/.git/refs/remotes/origin/master'
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [30ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse refs/remotes/origin/master [6ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse --show-toplevel [18ms]
+2024-11-14 00:08:56.179 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.179 [info] > git status -z -uall [7ms]
+2024-11-14 00:08:56.179 [info] > git merge-base refs/heads/main refs/remotes/origin/main [12ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [17ms]
+2024-11-14 00:08:56.179 [info] > git status -z -uall [19ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [15ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse --show-toplevel [33ms]
+2024-11-14 00:08:56.179 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-11-14 00:08:56.179 [info] [Model][doInitialScan] Initial repository scan completed - repositories (2), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-14 00:08:56.179 [info] > git diff --name-status -z --diff-filter=ADMR 794fe7d7a25e77d1e37fa53b366569615fbef2e6...refs/remotes/origin/main [42ms]
+2024-11-14 00:08:56.179 [info] > git merge-base refs/heads/main refs/remotes/origin/main [9ms]
+2024-11-14 00:08:56.179 [info] > git config --get commit.template [21ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [27ms]
+2024-11-14 00:08:56.179 [info] > git diff --name-status -z --diff-filter=ADMR 794fe7d7a25e77d1e37fa53b366569615fbef2e6...refs/remotes/origin/main [4ms]
+2024-11-14 00:08:56.179 [info] > git config --local branch.master.vscode-merge-base [4ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [5ms]
+2024-11-14 00:08:56.179 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/adminuser/SampleMaven/.git/refs/remotes/origin/master'
+2024-11-14 00:08:56.179 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [5ms]
+2024-11-14 00:08:56.179 [info] > git rev-parse refs/remotes/origin/master [7ms]
+2024-11-14 00:08:56.179 [info] > git merge-base refs/heads/master refs/remotes/origin/master [10ms]
+2024-11-14 00:08:56.179 [info] > git status -z -uall [9ms]
+2024-11-14 00:08:56.179 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-11-14 00:08:56.179 [info] > git diff --name-status -z --diff-filter=ADMR 5ff110cc5053fe311e8de90463098762e681ef99...refs/remotes/origin/master [7ms]
+2024-11-14 00:08:56.179 [info] > git merge-base refs/heads/master refs/remotes/origin/master [3ms]
+2024-11-14 00:08:56.179 [info] > git diff --name-status -z --diff-filter=ADMR 5ff110cc5053fe311e8de90463098762e681ef99...refs/remotes/origin/master [4ms]
+2024-11-14 00:08:56.744 [info] > git check-ignore -v -z --stdin [6ms]
+2024-11-14 00:08:56.747 [info] > git check-ignore -v -z --stdin [5ms]
+2024-11-14 00:09:10.670 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-14 00:09:10.670 [info] fatal: not a git repository (or any of the parent directories): .git

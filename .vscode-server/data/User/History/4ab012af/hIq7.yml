@@ -1,0 +1,23 @@
+---
+- name: Install Docker Compose on CentOS 7
+  hosts: ansible_controller
+  become: true
+  tasks:
+    - name: Install required packages
+      yum:
+        name: curl
+        state: present
+
+    - name: Download Docker Compose binary
+      get_url:
+        url: "https://github.com/docker/compose/releases/latest/download/docker-compose-{{ ansible_os_family | lower }}-{{ ansible_architecture }}"
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x'  # Make it executable
+
+    - name: Verify Docker Compose installation
+      command: docker-compose --version
+      register: docker_compose_version
+
+    - name: Print Docker Compose version
+      debug:
+        msg: "Docker Compose version: {{ docker_compose_version.stdout }}"

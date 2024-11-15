@@ -1,0 +1,30 @@
+---
+- name: Install Docker Compose on Rocky Linux / CentOS 8
+  hosts: rocky_servers  # Change this to your target host group
+  become: true
+  tasks:
+    - name: Update package database
+      dnf:
+        name: '*'
+        state: latest
+
+    - name: Add Docker repository
+      dnf_repository:
+        name: docker-ce
+        description: Docker CE Repository
+        baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+        enabled: yes
+        gpgcheck: yes
+
+    - name: Install Docker Compose plugin
+      dnf:
+        name: docker-compose-plugin
+        state: present
+
+    - name: Verify Docker Compose installation
+      command: docker compose version
+      register: docker_compose_version
+
+    - name: Print Docker Compose version
+      debug:
+        msg: "Docker Compose version: {{ docker_compose_version.stdout }}"

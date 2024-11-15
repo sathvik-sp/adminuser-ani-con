@@ -1,0 +1,41 @@
+---
+- name: Install Docker and Docker Compose on Controller
+  hosts: ansible_controller
+  become: true
+  tasks:
+    - name: Install required packages
+      yum:
+        name:
+          - yum-utils
+          - device-mapper-persistent-data
+          - lvm2
+        state: present
+
+    - name: Add Docker repository
+      command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+    - name: Install Docker
+      yum:
+        name: docker-ce
+        state: present
+
+    - name: Determine architecture for Docker Compose download
+      set_fact:
+        docker_compose_binary: "docker-compose-$(uname -s)-$(uname -m)"
+
+    - name: Set Docker Compose download URL
+      set_fact:
+        docker_compose_url: "https://github.com/docker/compose/releases/download/1.29.2/{{ docker_compose_binary }}"
+
+    - name: Download Docker Compose
+      get_url:
+        url: "{{ docker_compose_url }}"
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x'  # Make it executable
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+        enabled: true
+        

@@ -1,0 +1,63 @@
+---
+- name: Clear cached repository metadata
+  command: dnf clean all
+
+- name: Install Docker and Docker Compose on CentOS
+  hosts: ansible_controller
+  become: true
+
+  tasks:
+    - name: Uninstall any old versions of Docker
+      dnf:
+        name:
+          - docker
+          - docker-client
+          - docker-client-latest
+          - docker-common
+          - docker-latest
+          - docker-latest-logrotate
+          - docker-logrotate
+          - docker-engine
+        state: absent
+
+    - name: Install required dnf plugins
+      dnf:
+        name: dnf-plugins-core
+        state: present
+
+    - name: Add Docker repository manually
+      copy:
+        content: |
+          [docker-ce-stable]
+          name=Docker CE Stable - $basearch
+          baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
+          enabled=1
+          gpgcheck=1
+          gpgkey=https://download.docker.com/linux/centos/gpg
+        dest: /etc/yum.repos.d/docker-ce.repo
+
+    - name: Install Docker packages
+      dnf:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-buildx-plugin
+          - docker-compose-plugin
+        state: present
+
+    - name: Enable and start Docker service
+      systemd:
+        name: docker
+        enabled: true
+        state: started
+
+    - name: Verify Docker installation
+      command: docker run hello-world
+      register: hello_world_output
+      failed_when: "'Hello from Docker!' not in hello_world_output.stdout"
+      ignore_errors: yes  # Allows the playbook to continue if hello-world image is not available
+
+    - name: Print verification result
+      debug:
+        msg: "{{ hello_world_output.stdout if 'Hello from Docker!' in hello_world_output.stdout else 'Docker hello-world image run failed' }}"
