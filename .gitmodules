@@ -1,3 +1,6 @@
 [submodule "BankingMicroservice"]
 	path = BankingMicroservice
 	url = https://github.com/sathvik-sp/BankingMicroservice.git
+[submodule "Teraform"]
+	path = Teraform
+	url = https://github.com/sathvik-sp/Teraform.git
