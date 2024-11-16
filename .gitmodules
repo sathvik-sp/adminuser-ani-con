@@ -7,3 +7,6 @@
 [submodule "teraform"]
 	path = teraform
 	url = https://github.com/sathvik-sp/Teraform.git
+[submodule "SampleMaven"]
+	path = SampleMaven
+	url = https://github.com/sathvik-sp/SampleMaven.git
