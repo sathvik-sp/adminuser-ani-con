@@ -1,181 +1,3 @@
-docker -d -p 80003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
-clear
-docker -d -p 80run 003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
-clear
-docker run -d -p 80003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
-docker run -d -p 8003:80 --name con3 -v myvol2:/usr/local/apache2/htdocs httpd:latest
-docker ps
-curl localhost:8003
-clear
-sudo su -
-docker image ls
-docker history image ubuntu
-docker history image
-docker history ubuntu
-system docker df
-docker system df
-clear
-ls
-cd ex02/
-docker build . -t customhttpd:v1
-image ls
-docker image ls
-docker system history 3d8bd7c61704
-docker system df
-clear
-docker image ls
-docker system df
-docker history customhttpd:v1
-
-
-docker pull httpd:latest
-docker image ls
-docker build . -t customhttpd:v1
-docker image ls
-docker ps
-docker ps -a
-docker rm con0 con1 con2 con3
-docker ps -
-docker rm keen_chatterjee 
-docker run -d -p 8000:80 --name con1 customhttpd:v1 
-curl localhost:8000
-docker rm con1 -f
-docker rmi customhttpd:v1 
-clear
-docker image ls
-docker build . -t customhttpd:v1
-docker run -d -p 8000:80 --name con1 customhttpd:v1
-curl localhost:8000
-clear
-curl localhost:8000
-cd ..
-ls
-docker ps
-docker rm -f f15b3770bab0
-docker ps -a
-clear
-cd ex03
-docker build . -t custompy:v1
-docker run -d -p 8000:8000 --name con1 custompy:v1
-curl localhost:8000
-
-docker ps
-docker pd -a
-docker ps -a
-docker rmi 17199510ff24
-docker rm 17199510ff24
-docker image ls
-docker rmi custompy:v1 
-clear
-docker build . -t custompy:v1
-docker rmi custompy:v1 
-clear
-docker build . -t custompy:v1
-docker rmi custompy:v1 
-clear
-docker build . -t custompy:v1
-docker run -d -p 8000:5000 --name con1 custompy:v1
-curl localhost:8000
-clear
-curl localhost:8000
-docker exec -it con1 
-clear
-docker ps 
-docker exec -it con1 /bin/bash
-docker run -d redis
-docker inspect redis | grep IPA
-docker ps
-docker inspect redis
-docker inspect redis | grep ip
-docker exec -it redis /bin/bash
-docker ps
-docker image ls
-docker inspect 4a18ee874d27
-docker inspect 4a18ee874d27 | grep IPA
-
-
-clea
-clear
-sudo dnf check-update
-sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-docker compose version
-docker compose up -d
-docker compose version
-docker compose up -d
-docker ps
-docker rm($docker ps -q) -f
-docker rm $(docker ps -q) -f
-docker compose up -d
-curl localhost:8000
-docker compose scale web=3
-docker compose down 
-docker image ls
-docker rmi custompython:v5 
-docker ps
-docker ps -a
-docker compose up -d
-docker compose scale web=2
-docker compose scale web=3
-docker ps 
-clear
-clear
-sudo dnf install git
-clearclear
-clear
-git clone https://github.com/Vishwanathms/SampleMaven.git
-sudo dnf install mavel
-sudo dnf install maven
-mvn --versiom
-mvn --version
-mvn package
-cd SampleMaven/
-mvn package
-clear
-mvn package
-cd SampleMaven/
-mvn package
-docker image ls
-docker build . -t customtomcat:v1
-docker image ls
-docker rm $(docker ps -q) 
-docker rm $(docker ps -q) -f 
-docker prune
-docker container prune
-docker image ls
-docker run -d -p 8000:8080 --name con1 customtomcat:v1
-curl localhost:8000
-docker rm $(docker ps -q) -f 
-docker image ls
-docker rmi customtomcat
-docker rmi customtomcat:v1 
-mvn package
-docker build . -t customtomcat:v1
-docker image ls
-docker run -d -p 8000:8080 --name con1 customtomcat:v1 
-curl localhost:8000
-docker rmi customtomcat:v1 
-docker rm $(docker ps -q) -f 
-docker rmi customtomcat:v1 
-docker build . -t customtomcat:v1
-docker run -d -p 8000:8080 --4ame con1 customtomcat:v1 
-docker run -d -p 8004:8080 --name con1 customtomcat:v1 
-
-docker rm $(docker ps -q) -f 
-docker rmi customtomcat:v1 
-docker image ls
-mvn package
-docker compose up -d
-docker ps
-curl localhost:8004
-mvn package
-curl localhost:8004
-docker compose down
-
-curl localhost:8004
-docker ps
-curl localhost:8005
-docker exec -it samplemaven-web-1 /bin/bash
-ls /usr/local/tomcat/webapps/ROOT/
 docker rmi customtomcat:v1 
 docker rmi customtomcat:v1 -f
 docker image ls
@@ -998,3 +820,181 @@ sudo systemctl restart
 sudo systemctl restart sshd
 systemctl status jenkins
 clear
+clear
+mkdir jenkins_repo
+cd jenkins_repo/
+git init
+touch app.java
+vi app.java 
+git add .
+git commit -m "initial commit"
+git push origin
+ git push --set-upstream origin master
+clear
+cd ..
+rm -m jenkins_repo/
+rm -m jenkins_repo
+rm -r jenkins_repo
+clear
+git clone git@github.com:sathvik-sp/jenkins_repo.git
+cat .ssh/id_rsa.pub 
+git clone git@github.com:sathvik-sp/jenkins_repo.git
+clear
+cd jenkins_repo/
+touch app.java
+vi app.java 
+git add .
+git commit -m "initial commit"
+git push origin
+clear\
+clear
+cat .ssh/id_rsa.pub 
+cd ..
+cat .ssh/id_rsa.pub 
+cat .ssh/id_rsa
+cat .ssh/id_rsa.pub 
+vi .ssh/id_rsa.pub 
+ls -l .ssh/
+df
+git init
+git add .
+git commit -m "Initial commit"
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/sathvik-sp/adminuser-ani-con.git
+git push -u origin main
+[adminuser@VM-b-01 ~]$ git remote add origin https://github.com/sathvik-sp/adminuser-ani-con.git
+[adminuser@VM-b-01 ~]$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/sathvik-sp/adminuser-ani-con.git'
+[adminuser@VM-b-01 ~]$ 
+git checkout -b main
+git push -u origin main
+git image ls
+exit
+docker image ls
+docker rmi tomcat:latest jenkins/jenkins:lts openjdk:latest bankingmicroservice-banking-service:latest 
+docker image ls
+docker rmi bankingmicroservice-banking-service:latest -f
+docker rmi jenkins/jenkins:lts -f
+ clear
+docker image ls
+clear
+fd
+df
+cd 
+cd ..
+clear
+cd ..
+celar
+clear
+clear
+dnf install terraform
+sudo dnf install terraform
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install terraform
+clear
+cd ex01/
+terraform plan
+terraform init
+terraform plan
+az login
+terraform plan
+az login
+az login --tenant 6de2dc44-88fb-442f-88f8-cfb2878a07c4
+terraform plan
+terraform apply
+terraform plan
+clear
+cd ../ex02
+terraform init
+terraform plan
+clear
+terraform plan
+clear
+cd ..
+cd teraform/
+terraform init
+terraform plan
+cd ex02/
+terraform init
+terraform plan
+terraform apply
+az vm image list --offer rocky-linux-9 --publisher rockylinux --all --output tabl
+az account show
+az vm image list --publisher rockylinux --all --output table
+az vm image list --all --output table
+az vm image list --publisher solvedevops1643693563360 --all --output table
+clear
+az vm list-sizes --location eastus --output table
+clear
+terraform plan
+terraform apply
+terraform plan
+terraform apply
+az vm image show --publisher solvedevops1643693563360 --offer rocky-linux-9 --sku plan001 --query "hypervisorGeneration"
+az vm image show --publisher solvedevops1643693563360 --offer rocky-linux-9 --sku plan001
+az vm image show --publisher solvedevops1643693563360 --offer rocky-linux-9 
+az vm list-sizes --location eastus --out table
+terraform plan
+terraform apply
+terraform plan
+terraform apply
+clear
+terraform plan
+terraform apply
+celar
+clear
+terraform plan
+terraform apply
+terraform refresh
+azurerm_resource_group.rg: Creating...
+azurerm_resource_group.rg: Creation complete after 9s [id=/subscriptions/4cad2eb7-c985-4082-87bd-3eaf873644fa/resourceGroups/rg-scenario2]
+azurerm_managed_disk.data_disk2: Creating...
+azurerm_network_security_group.nsg: Creating...
+azurerm_virtual_network.vnet: Creating...
+azurerm_managed_disk.data_disk1: Creating...
+azurerm_network_security_group.nsg: Creation complete after 2s [id=/subscriptions/4cad2eb7-c985-4082-87bd-3eaf873644fa/resourceGroups/rg-scenario2/providers/Microsoft.Network/networkSecurityGroups/nsg-scenario2]
+azurerm_managed_disk.data_disk2: Creation complete after 3s [id=/subscriptions/4cad2eb7-c985-4082-87bd-3eaf873644fa/resourceGroups/rg-scenario2/providers/Microsoft.Compute/disks/win-vm-disk]
+azurerm_managed_disk.data_disk1: Creation complete after 3s [id=/subscriptions/4cad2eb7-c985-4082-87bd-3eaf873644fa/resourceGroups/rg-scenario2/providers/Microsoft.Compute/disks/linux-vm-disk]
+╷
+│ Error: Provider produced inconsistent result after apply
+│ 
+│ When applying changes to azurerm_virtual_network.vnet, provider "provider[\"registry.terraform.io/hashicorp/azurerm\"]" produced an unexpected new value: Root
+│ object was present, but now absent.
+│ 
+│ This is a bug in the provider, which should be reported in the provider's own issue tracker.
+
+
+terraform apply
+clear
+terraform plan
+terraform apply
+clear
+terraform plan
+terraform apply
+terraform import azurerm_linux_virtual_machine.linux_vm /subscriptions/4cad2eb7-c985-4082-87bd-3eaf873644fa/resourceGroups/rg-S2/providers/Microsoft.Compute/virtualMachines/linux-vm
+terraform plan
+terraform apply
+clear
+terraform clear
+terraform
+terraform destroy
+clear
+terraform apply
+cd ../ex01
+terraform plan
+terraform apply
+terraform destroy
+ls
+git init 
+git add .
+git stage
+git 
+git commit -m "initial commit"
+git push origin https://github.com/sathvik-sp/Teraform.git
+git remote add origin https://github.com/yourusername/your-repository-name.git
+git remote add origin https://github.com/sathvik-sp/Teraform.git
+git remote set-url origin https://github.com/sathvik-sp/Teraform.git
+git push -u origin master
