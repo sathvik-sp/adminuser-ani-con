@@ -1,0 +1,3 @@
+[submodule "BankingMicroservice"]
+	path = BankingMicroservice
+	url = https://github.com/sathvik-sp/BankingMicroservice.git
