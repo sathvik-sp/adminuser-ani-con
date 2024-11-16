@@ -4,3 +4,6 @@
 [submodule "Teraform"]
 	path = Teraform
 	url = https://github.com/sathvik-sp/Teraform.git
+[submodule "teraform"]
+	path = teraform
+	url = https://github.com/sathvik-sp/Teraform.git
